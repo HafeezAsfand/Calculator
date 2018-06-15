@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta charset="ISO-8859-1">
+		<title>Ally - ASFI - Calculator</title>
+		</head>
+	<body>
+	<style> 
+	body{
+	background-color: orange;
+	}
+	</style>
+	<form method="POST">
+	<input type="number" name="firstNumber" required>
+	<select name="operator">
+		<option value="+">Add</option>
+		<option value="-">Subtract</option>
+		<option value="*">Multiply</option>
+		<option value="/">Divide</option>
+		<option value="^">Exponent</option>
+	</select>
+	<input type="number" name="secondNumber" required>
+	<br></br>
+	<input type="submit" value="calculate">
+	</form>
+	
+	{{#Answer}}
+  	<h1> Your current answer is {{Answer}} </h1>
+	{{/Answer}}
+	
+	{{#History}}
+		Your past calculation: {{.}} <br>
+		{{/History}}
+	</body>
+</html>
